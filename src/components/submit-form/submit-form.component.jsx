@@ -8,7 +8,7 @@ class SubmitForm extends React.Component {
     input: ' ',
   }
 
-  //onSubmit funciton is an event called in the <form> tag and called when submit button is clicked 
+  //onSubmit function is an event called in the <form> tag and called when submit button is clicked 
   onSubmit = (event) => {
     event.preventDefault();
     //onSubmit function calls handle submit function from App.js component

@@ -8,9 +8,12 @@ import TodoList from './components/todo-list/todo-list.component';
 class App extends React.Component{
   //state objects here 
   state = {
-    tasks: ['task1', 'task2'],
+    tasks: [],
+    //isLoading is to inform the user that the site is fetching data - it may take a few seconds
     
-}
+
+
+  }
 
   //functions here
   handleDelete = (index) => {
@@ -24,11 +27,21 @@ class App extends React.Component{
   }
   //has to be in the component becuase we are adding data to tasks state object 
   handleAdd = (input) => {
+    
     //takes input (state object/data) from submit-form component and adds it to array of tasks
     this.setState({tasks: [...this.state.tasks, input]})
   }
 
-
+  componentDidMount() {
+    fetch("https://frauenloop-todo-service.herokuapp.com/api/todos")
+      //pulls the response from url into json file
+      .then(response => response.json())
+      //updates our state object to = the json file 
+      //(todos refers to complete data inside api)
+      .then(todos => {
+        this.setState({ tasks: todos });
+      });
+  }
 
   render() {
   return (
