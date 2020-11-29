@@ -1,0 +1,13 @@
+button {
+  margin: 0px auto;
+}
+
+input,
+textarea {
+  background-color: none;
+}
+
+label {
+  font-size: larger;
+  font-weight: 600;
+}
