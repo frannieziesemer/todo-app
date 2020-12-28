@@ -9,3 +9,9 @@ Learnings:
   - bulma css library 
  
 API created by FrauenLoop mentor: Tugce Konuklar.
+
+
+
+To do
+- convert to hooks 
+- add edit and completed (instead of delete) functions
