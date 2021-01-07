@@ -63,6 +63,7 @@ class App extends React.Component{
   // this function does the first step of api call 
   //cDM() executes a second render (1st render()) of the page with the data fetched from api
   //after cDM() function api date is stored locally and can be displayed or passed to other functions as props
+  //cDM means that component is rendered
   componentDidMount() {
     fetch("https://frauenloop-todo-service.herokuapp.com/api/todos")
       //pulls the response from url into json file

@@ -4,7 +4,7 @@ import './app-wrapper.css';
 
 function AppWrapper ( { children }) {
   return (
-    <div className="app-wrapper container mb-10 p-6">
+    <div className="app-wrapper container">
       <Header></Header>
       <div className="columns"> {children} </div>
     </div>
